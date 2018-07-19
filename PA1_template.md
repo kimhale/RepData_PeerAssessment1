@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 ## Set up working directory & data
 This just changes the working directory and unzips the datafile from the repo if necessary.
 
@@ -30,7 +35,7 @@ ggplot(data = steps) +
     labs(x = "Total Number of Steps per Day", y = "Count")
 ```
 
-![](PA1_template_files/figure-html/StepsPerDay-1.png)<!-- -->
+![plot of chunk StepsPerDay](figure/StepsPerDay-1.png)
 
 ```r
 # Calculate the mean and median of the total number of steps taken per day
@@ -54,7 +59,7 @@ ggplot(data = daily) +
     labs(x = "Time Interval", y = "Average Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/AvgDailyPattern-1.png)<!-- -->
+![plot of chunk AvgDailyPattern](figure/AvgDailyPattern-1.png)
 
 ```r
 # Find 5-minute interval, that on average across all the days in the dataset, contains the maximum number of steps
@@ -86,7 +91,7 @@ ggplot(data = steps_noMiss) +
     labs(x = "Total Number of Steps per Day", y = "Count")
 ```
 
-![](PA1_template_files/figure-html/MissingValues-1.png)<!-- -->
+![plot of chunk MissingValues](figure/MissingValues-1.png)
 
 ```r
 # Mean/Median for steps taken per day
@@ -111,6 +116,6 @@ ggplot(data = weekend_noMiss) +
     facet_grid(day~.)
 ```
 
-![](PA1_template_files/figure-html/WeekendsWeekedays-1.png)<!-- -->
+![plot of chunk WeekendsWeekedays](figure/WeekendsWeekedays-1.png)
 
 The plots above show the average number of steps by time interval for weekdays and the weekends. There is some difference between the two plots. For example, the avereage number of steps begans to pick up later in the morning and activity stays higher longer into the evening.
